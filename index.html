@@ -3,259 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karen Brasil | Data Analytics & Automation</title>
+    <title>Karen Brasil | Analista de Dados & Automação</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- NAVEGAÇÃO -->
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">Karen Brasil</div>
-            <div class="nav-links">
-                <a href="#sobre" class="nav-link active">Sobre</a>
-                <a href="#habilidades" class="nav-link">Habilidades</a>
-                <a href="#experiencias" class="nav-link">Experiência</a>
-                <a href="#contato" class="nav-link">Contato</a>
-                <button class="lang-toggle" id="langToggle">EN</button>
+            <div class="nav-menu">
+                <a href="#inicio" class="nav-item active">Início</a>
+                <a href="#sobre" class="nav-item">Sobre</a>
+                <a href="#habilidades" class="nav-item">Habilidades</a>
+                <a href="#experiencia" class="nav-item">Experiência</a>
+                <a href="#projetos" class="nav-item">Projetos</a>
+                <a href="#contato" class="nav-item">Contato</a>
+                <button class="lang-btn" id="langBtn">EN</button>
             </div>
         </div>
     </nav>
 
-    <!-- HERO / INÍCIO -->
-    <section id="sobre" class="hero">
+    <!-- HERO -->
+    <section id="inicio" class="hero">
         <div class="hero-content">
-            <div class="hero-text">
-                <h1 id="hero-title">Karen Brasil</h1>
-                <p id="hero-subtitle">Analista de Dados & Automação</p>
-                <p id="hero-description">Especializada em análise de dados, automação de processos e integração com IA. Transformo dados em insights.</p>
-                <a href="#contato" class="cta-button" id="cta-button">Conectar</a>
+            <h1 id="hero-title">Karen Brasil</h1>
+            <p id="hero-subtitle">Analista de Dados & Automação</p>
+            <p id="hero-desc">Transformo dados em decisões estratégicas e automatizzo processos complexos com IA e Python.</p>
+            <a href="#contato" class="cta-btn" id="cta-btn">Conectar</a>
+        </div>
+    </section>
+
+    <!-- SOBRE (Expansível) -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 id="sobre-title">Sobre</h2>
+                <button class="expand-btn" onclick="toggleSection('sobre')">+</button>
+            </div>
+            <div id="sobre-content" class="section-content collapsed">
+                <p id="sobre-text">Analista de dados com 2+ anos de experiência em infraestrutura e suporte técnico. Especializada em SQL, Python, automação com n8n e integração com IA (Claude, Gemini). Graduanda em Análise e Desenvolvimento de Sistemas e Data Analytics.</p>
             </div>
         </div>
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre-detail" class="section about">
+    <!-- HABILIDADES (Expansível) -->
+    <section id="habilidades" class="section">
         <div class="container">
-            <h2 id="about-title">Sobre</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p id="about-intro">Olá! Sou Karen, analista de dados com 2+ anos de experiência em suporte técnico e infraestrutura.</p>
-                    <p id="about-skills">Tenho conhecimento em <strong>SQL, Python, análise de dados, automação de processos e integração com IA</strong>. Atualmente estudo Análise e Desenvolvimento de Sistemas e Data Analytics.</p>
-                    <p id="about-goal">Meu objetivo é transformar dados em decisões estratégicas e criar soluções que automatiazem processos complexos.</p>
-                </div>
-                <div class="about-info">
-                    <div class="info-item">
-                        <span class="label" id="location-label">Localização</span>
-                        <span class="value">Eusébio, Ceará 🇧🇷</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="label" id="status-label">Disponibilidade</span>
-                        <span class="value" id="availability">Remoto / Híbrido</span>
-                    </div>
-                    <div class="info-item">
-                        <span class="label" id="contract-label">Modalidade</span>
-                        <span class="value" id="contract">CTL / PJ</span>
-                    </div>
+            <div class="section-header">
+                <h2 id="skills-title">Habilidades</h2>
+                <button class="expand-btn" onclick="toggleSection('habilidades')">+</button>
+            </div>
+            <div id="habilidades-content" class="section-content collapsed">
+                <div class="skills-grid">
+                    <div class="skill-card">Python</div>
+                    <div class="skill-card">SQL</div>
+                    <div class="skill-card">JavaScript</div>
+                    <div class="skill-card">Java</div>
+                    <div class="skill-card">Pandas</div>
+                    <div class="skill-card">Power BI</div>
+                    <div class="skill-card">PostgreSQL</div>
+                    <div class="skill-card">Docker</div>
+                    <div class="skill-card">Git</div>
+                    <div class="skill-card">APIs REST</div>
+                    <div class="skill-card">ZABBIX</div>
+                    <div class="skill-card">GRAFANA</div>
+                    <div class="skill-card">n8n</div>
+                    <div class="skill-card">Claude API</div>
+                    <div class="skill-card">Gemini</div>
+                    <div class="skill-card">Excel</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- HABILIDADES -->
-    <section id="habilidades" class="section skills">
+    <!-- EXPERIÊNCIA (Timeline) -->
+    <section id="experiencia" class="section">
         <div class="container">
-            <h2 id="skills-title">Habilidades</h2>
+            <div class="section-header">
+                <h2 id="exp-title">Experiência Profissional</h2>
+                <button class="expand-btn" onclick="toggleSection('experiencia')">+</button>
+            </div>
+            <div id="experiencia-content" class="section-content collapsed">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 id="exp1-title">Analista N1 - NOC</h3>
+                            <p class="timeline-company" id="exp1-company">How be - Tecnologia e Soluções</p>
+                            <p class="timeline-date" id="exp1-date">2024 - 2025 • 10 meses</p>
+                            <p id="exp1-desc">Monitoramento de infraestrutura com ZABBIX e GRAFANA. Gestão de câmeras IP, WiFi e dispositivos IoT.</p>
+                        </div>
+                    </div>
 
-            <!-- LINGUAGENS DE PROGRAMAÇÃO -->
-            <div class="skills-category">
-                <h3 id="languages-title">Linguagens de Programação</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-level">Intermediário</span>
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 id="exp2-title">Suporte Técnico - Field Service</h3>
+                            <p class="timeline-company" id="exp2-company">Mobwire - Serviços de Telecomunicação</p>
+                            <p class="timeline-date" id="exp2-date">2023 - 2024 • 1 ano</p>
+                            <p id="exp2-desc">Suporte remoto via AnyDesk. Gestão de máquinas com Active Directory. Instalação e configuração de sistemas.</p>
+                        </div>
                     </div>
-                    <div class="skill-card">
-                        <span class="skill-name">SQL</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">Java</span>
-                        <span class="skill-level">Básico</span>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <h3 id="exp3-title">Estagiária - Suporte de TI</h3>
+                            <p class="timeline-company" id="exp3-company">Hapvida Assistência Médica S.A.</p>
+                            <p class="timeline-date" id="exp3-date">2020 - 2023 • 2 anos 8 meses</p>
+                            <p id="exp3-desc">Suporte biométrico. Análise de solicitações e autorizações de procedimentos. Treinamento de prestadores.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- FRAMEWORKS & BIBLIOTECAS -->
-            <div class="skills-category">
-                <h3 id="frameworks-title">Frameworks & IA</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <span class="skill-name">n8n</span>
-                        <span class="skill-level">Automação</span>
+                <div class="education">
+                    <h3 id="edu-title">Formação</h3>
+                    <div class="education-item">
+                        <p><strong>Análise e Desenvolvimento de Sistemas</strong> • Estácio do Ceará (2023-2025)</p>
                     </div>
-                    <div class="skill-card">
-                        <span class="skill-name">Claude API</span>
-                        <span class="skill-level">Integração IA</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">Gemini</span>
-                        <span class="skill-level">Integração IA</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">Pandas</span>
-                        <span class="skill-level">Análise Dados</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FERRAMENTAS & PLATAFORMAS -->
-            <div class="skills-category">
-                <h3 id="tools-title">Ferramentas & Plataformas</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <span class="skill-name">Power BI</span>
-                        <span class="skill-level">Dashboards</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">Grafana</span>
-                        <span class="skill-level">Monitoramento</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">ZABBIX</span>
-                        <span class="skill-level">Infraestrutura</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">Excel</span>
-                        <span class="skill-level">Análise Avançada</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- BANCO DE DADOS -->
-            <div class="skills-category">
-                <h3 id="database-title">Banco de Dados</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <span class="skill-name">PostgreSQL</span>
-                        <span class="skill-level">Relacional</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">SQL</span>
-                        <span class="skill-level">Queries</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">Git</span>
-                        <span class="skill-level">Controle Versão</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">Docker</span>
-                        <span class="skill-level">Containerização</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- OUTRAS COMPETÊNCIAS -->
-            <div class="skills-category">
-                <h3 id="other-title">Outras Competências</h3>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <span class="skill-name">APIs REST</span>
-                        <span class="skill-level">Integração</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">React Native</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">GLPI</span>
-                        <span class="skill-level">Gestão de TI</span>
-                    </div>
-                    <div class="skill-card">
-                        <span class="skill-name">Linux</span>
-                        <span class="skill-level">Básico</span>
+                    <div class="education-item">
+                        <p><strong>Data Analytics</strong> • Digital College (2024-2025)</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EXPERIÊNCIAS -->
-    <section id="experiencias" class="section experience">
+    <!-- PROJETOS -->
+    <section id="projetos" class="section">
         <div class="container">
-            <h2 id="exp-title">Experiência Profissional</h2>
-
-            <div class="experience-item">
-                <div class="exp-header">
-                    <h3 id="exp1-title">Analista N1 - NOC</h3>
-                    <span class="exp-date" id="exp1-date">2024 - 2025</span>
-                </div>
-                <p class="exp-company" id="exp1-company">How be - Tecnologia e Soluções</p>
-                <p class="exp-description" id="exp1-desc">Monitoramento de infraestrutura com ZABBIX e GRAFANA. Gestão de câmeras IP, WiFi e dispositivos IoT. Atendimento de chamados técnicos.</p>
+            <div class="section-header">
+                <h2 id="proj-title">Projetos</h2>
+                <button class="expand-btn" onclick="toggleSection('projetos')">+</button>
             </div>
+            <div id="projetos-content" class="section-content collapsed">
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>WorkConnect</h3>
+                        <p>App de análise e busca de vagas</p>
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Data Analytics</span>
+                        </div>
+                        <a href="https://github.com/KarenBrasil" target="_blank" class="project-link">Ver Projeto →</a>
+                    </div>
 
-            <div class="experience-item">
-                <div class="exp-header">
-                    <h3 id="exp2-title">Suporte Técnico - Field Service</h3>
-                    <span class="exp-date" id="exp2-date">2023 - 2024</span>
-                </div>
-                <p class="exp-company" id="exp2-company">Mobwire - Serviços de Telecomunicação</p>
-                <p class="exp-description" id="exp2-desc">Suporte remoto via AnyDesk. Gestão de máquinas e usuários com Active Directory. Instalação de softwares e configuração de sistemas.</p>
-            </div>
+                    <div class="project-card">
+                        <h3>Dashboard Monitoramento</h3>
+                        <p>Dashboard ZABBIX & GRAFANA</p>
+                        <div class="project-tags">
+                            <span>ZABBIX</span>
+                            <span>GRAFANA</span>
+                            <span>Infraestrutura</span>
+                        </div>
+                        <a href="https://sites.google.com/view/portfoliokarenbr" target="_blank" class="project-link">Ver Detalhes →</a>
+                    </div>
 
-            <div class="experience-item">
-                <div class="exp-header">
-                    <h3 id="exp3-title">Estagiária - Suporte de TI</h3>
-                    <span class="exp-date" id="exp3-date">2020 - 2023</span>
-                </div>
-                <p class="exp-company" id="exp3-company">Hapvida Assistência Médica S.A.</p>
-                <p class="exp-description" id="exp3-desc">Suporte biométrico e análise de solicitações. Treinamento de prestadores. Autorizações de procedimentos e consultas.</p>
-            </div>
+                    <div class="project-card">
+                        <h3>Automação com n8n</h3>
+                        <p>Fluxos de automação com IA</p>
+                        <div class="project-tags">
+                            <span>n8n</span>
+                            <span>Claude API</span>
+                            <span>Automação</span>
+                        </div>
+                        <a href="https://github.com/KarenBrasil" target="_blank" class="project-link">Ver Código →</a>
+                    </div>
 
-            <!-- FORMAÇÃO -->
-            <div class="education-section">
-                <h3 id="education-title">Formação</h3>
-                <div class="education-item">
-                    <span class="education-name">Análise e Desenvolvimento de Sistemas</span>
-                    <span class="education-school">Estácio do Ceará | 2023 - 2025</span>
-                </div>
-                <div class="education-item">
-                    <span class="education-name">Data Analytics</span>
-                    <span class="education-school">Digital College | 2024 - 2025</span>
-                </div>
-                <div class="education-item">
-                    <span class="education-name">Cursos & Certificações</span>
-                    <span class="education-school">SQL • Java • Endian Firewall • UDEMY</span>
+                    <div class="project-card">
+                        <h3>Análise de Dados</h3>
+                        <p>Projetos com Power BI & SQL</p>
+                        <div class="project-tags">
+                            <span>Power BI</span>
+                            <span>SQL</span>
+                            <span>Python</span>
+                        </div>
+                        <a href="https://sites.google.com/view/portfoliokarenbr" target="_blank" class="project-link">Ver Portfolio →</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CONTATO -->
-    <section id="contato" class="section contact">
+    <section id="contato" class="section contact-section">
         <div class="container">
             <h2 id="contact-title">Contato</h2>
-            <p id="contact-subtitle">Vamos conversar sobre oportunidades!</p>
-
+            <p id="contact-desc">Vamos conversar sobre oportunidades!</p>
             <div class="contact-links">
-                <a href="https://linkedin.com/in/karen-brasil19" target="_blank" class="contact-card">
-                    <span class="contact-icon">in</span>
-                    <span class="contact-label" id="label-linkedin">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/karen-brasil19/" target="_blank" class="contact-item">
+                    <span class="contact-icon">𝕷</span>
+                    <span>LinkedIn</span>
                 </a>
-                <a href="https://github.com/KarenBrasil" target="_blank" class="contact-card">
+                <a href="https://github.com/KarenBrasil" target="_blank" class="contact-item">
                     <span class="contact-icon">⚙</span>
-                    <span class="contact-label" id="label-github">GitHub</span>
+                    <span>GitHub</span>
                 </a>
-                <a href="mailto:eukarenbrasil@gmail.com" class="contact-card">
+                <a href="mailto:eukarenbrasil@gmail.com" class="contact-item">
                     <span class="contact-icon">✉</span>
-                    <span class="contact-label" id="label-email">Email</span>
+                    <span>Email</span>
                 </a>
-                <a href="https://wa.me/558599370928" target="_blank" class="contact-card">
+                <a href="https://wa.me/5585998370928" target="_blank" class="contact-item">
                     <span class="contact-icon">💬</span>
-                    <span class="contact-label" id="label-whatsapp">WhatsApp</span>
+                    <span>WhatsApp</span>
                 </a>
             </div>
         </div>
