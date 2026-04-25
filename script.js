@@ -1,4 +1,55 @@
 // ================================
+// DARK MODE TOGGLE
+// ================================
+
+const themeBtn = document.getElementById('themeBtn');
+const htmlElement = document.documentElement;
+const body = document.body;
+
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+
+    body.setAttribute('data-theme', theme);
+    htmlElement.style.colorScheme = theme;
+}
+
+themeBtn.addEventListener('click', () => {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+    body.setAttribute('data-theme', newTheme);
+    htmlElement.style.colorScheme = newTheme;
+    localStorage.setItem('theme', newTheme);
+});
+
+initializeTheme();
+
+// ================================
+// FADE-IN ANIMATION ON SCROLL
+// ================================
+
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animation = 'slideUp 0.6s ease-out forwards';
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+document.querySelectorAll('.section').forEach(section => {
+    section.style.opacity = '0';
+    observer.observe(section);
+});
+
+// ================================
 // ACTIVE NAV ON SCROLL
 // ================================
 
