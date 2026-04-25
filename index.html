@@ -54,25 +54,63 @@
                 <h2 id="skills-title">Habilidades</h2>
                 <button class="expand-btn" onclick="toggleSection('habilidades')">+</button>
             </div>
-            <div id="habilidades-content" class="section-content collapsed">
-                <div class="skills-grid">
-                    <div class="skill-card">Python</div>
-                    <div class="skill-card">SQL</div>
-                    <div class="skill-card">JavaScript</div>
-                    <div class="skill-card">Java</div>
-                    <div class="skill-card">Pandas</div>
-                    <div class="skill-card">Power BI</div>
-                    <div class="skill-card">PostgreSQL</div>
-                    <div class="skill-card">Docker</div>
-                    <div class="skill-card">Git</div>
-                    <div class="skill-card">APIs REST</div>
-                    <div class="skill-card">ZABBIX</div>
-                    <div class="skill-card">GRAFANA</div>
-                    <div class="skill-card">n8n</div>
-                    <div class="skill-card">Claude API</div>
-                    <div class="skill-card">Gemini</div>
-                    <div class="skill-card">Excel</div>
+            <div id="habilidades-content" class="section-content expanded">
+
+                <!-- Linguagens de Programação -->
+                <div class="skills-category">
+                    <h3 class="category-title">Linguagens de Programação</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-level="intermediario">Python</div>
+                        <div class="skill-card" data-level="intermediario">SQL</div>
+                        <div class="skill-card" data-level="basico">JavaScript</div>
+                        <div class="skill-card" data-level="basico">Java</div>
+                    </div>
                 </div>
+
+                <!-- Data Analytics -->
+                <div class="skills-category">
+                    <h3 class="category-title">Data Analytics & BI</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-level="intermediario">Pandas</div>
+                        <div class="skill-card" data-level="intermediario">Power BI</div>
+                        <div class="skill-card" data-level="intermediario">Excel</div>
+                        <div class="skill-card" data-level="basico">Matplotlib</div>
+                    </div>
+                </div>
+
+                <!-- Infraestrutura & Monitoramento -->
+                <div class="skills-category">
+                    <h3 class="category-title">Infraestrutura & Monitoramento</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-level="intermediario">ZABBIX</div>
+                        <div class="skill-card" data-level="intermediario">GRAFANA</div>
+                        <div class="skill-card" data-level="intermediario">Active Directory</div>
+                        <div class="skill-card" data-level="basico">Docker</div>
+                    </div>
+                </div>
+
+                <!-- IA & Automação -->
+                <div class="skills-category">
+                    <h3 class="category-title">IA & Automação</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-level="basico">Claude API</div>
+                        <div class="skill-card" data-level="basico">Gemini</div>
+                        <div class="skill-card" data-level="basico">n8n</div>
+                        <div class="skill-card" data-level="basico">APIs REST</div>
+                    </div>
+                </div>
+
+                <!-- Banco de Dados & DevOps -->
+                <div class="skills-category">
+                    <h3 class="category-title">Banco de Dados & DevOps</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card" data-level="intermediario">PostgreSQL</div>
+                        <div class="skill-card" data-level="intermediario">Git</div>
+                        <div class="skill-card" data-level="basico">MongoDB</div>
+                        <div class="skill-card" data-level="basico">Vercel</div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
