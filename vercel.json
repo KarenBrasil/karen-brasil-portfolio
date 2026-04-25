@@ -1,0 +1,7 @@
+{
+  "name": "karen-brasil-portfolio",
+  "version": 2,
+  "buildCommand": "echo 'Ready!'",
+  "outputDirectory": ".",
+  "public": true
+}
