@@ -1,131 +1,96 @@
-// ================================
-// DARK MODE TOGGLE
-// ================================
+// ─── THEME TOGGLE ───
+const themeBtn = document.getElementById('themeToggle');
+// (Dark only for now — can extend later)
 
-const themeBtn = document.getElementById('themeBtn');
-const htmlElement = document.documentElement;
-const body = document.body;
+// ─── ACTIVE NAV ON SCROLL ───
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
 
-function initializeTheme() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
-
-    body.setAttribute('data-theme', theme);
-    htmlElement.style.colorScheme = theme;
-}
-
-themeBtn.addEventListener('click', () => {
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-
-    body.setAttribute('data-theme', newTheme);
-    htmlElement.style.colorScheme = newTheme;
-    localStorage.setItem('theme', newTheme);
-});
-
-initializeTheme();
-
-// ================================
-// FADE-IN ANIMATION ON SCROLL
-// ================================
-
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animation = 'slideUp 0.6s ease-out forwards';
-            observer.unobserve(entry.target);
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.section').forEach(section => {
-    section.style.opacity = '0';
-    observer.observe(section);
-});
-
-// ================================
-// ACTIVE NAV ON SCROLL
-// ================================
-
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section[id]');
-    let current = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    document.querySelectorAll('.nav-item').forEach(item => {
-        item.classList.remove('active');
-        if (item.getAttribute('href').slice(1) === current) {
-            item.classList.add('active');
-        }
-    });
-});
-
-// ================================
-// LANGUAGE TOGGLE
-// ================================
-
-const translations = {
-    pt: {
-        'logo-text': 'Karen Brasil',
-        'logo-badge': 'Data • IA • Automação',
-        'hero-label': 'Bem-vindo',
-        'hero-title': 'Karen Brasil',
-        'hero-subtitle': 'Transformo dados em estratégia e automatizzo processos com IA',
-        'hero-description': 'Especialista em SQL, Python e automação. 2+ anos construindo soluções de dados e infraestrutura que impactam.',
-        'contact-cta': 'Vamos Conversar',
-        'about-title': 'Sobre Mim',
-        'about-subtitle': 'Profissional em transformação digital',
-        'skills-title': 'Stack Técnico',
-        'skills-subtitle': 'Ferramentas que domino',
-        'exp-title': 'Trajetória Profissional',
-        'exp-subtitle': 'Experiências que me formaram',
-        'projects-title': 'Projetos em Destaque',
-        'projects-subtitle': 'Trabalhos que realizei',
-    },
-    en: {
-        'logo-text': 'Karen Brasil',
-        'logo-badge': 'Data • AI • Automation',
-        'hero-label': 'Welcome',
-        'hero-title': 'Karen Brasil',
-        'hero-subtitle': 'I transform data into strategy and automate processes with AI',
-        'hero-description': 'Specialist in SQL, Python and automation. 2+ years building data and infrastructure solutions that impact.',
-        'contact-cta': 'Let\'s Talk',
-        'about-title': 'About Me',
-        'about-subtitle': 'Digital transformation professional',
-        'skills-title': 'Tech Stack',
-        'skills-subtitle': 'Tools I master',
-        'exp-title': 'Professional Journey',
-        'exp-subtitle': 'Experiences that shaped me',
-        'projects-title': 'Featured Projects',
-        'projects-subtitle': 'Work I\'ve done',
+const observerNav = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(a => a.classList.remove('active'));
+      const active = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+      if (active) active.classList.add('active');
     }
-};
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
 
-let currentLang = 'pt';
+sections.forEach(s => observerNav.observe(s));
 
-document.getElementById('langBtn').addEventListener('click', function() {
-    currentLang = currentLang === 'pt' ? 'en' : 'pt';
-    this.textContent = currentLang === 'pt' ? 'EN' : 'PT';
-    updateLanguage();
+// ─── FADE IN ON SCROLL ───
+const fadeEls = document.querySelectorAll('.fade-in');
+const observerFade = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, entry.target.dataset.delay || 0);
+      observerFade.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+fadeEls.forEach((el, i) => {
+  el.dataset.delay = i * 60;
+  observerFade.observe(el);
 });
 
-function updateLanguage() {
-    Object.keys(translations[currentLang]).forEach(key => {
-        const element = document.getElementById(key);
-        if (element) {
-            element.textContent = translations[currentLang][key];
+// ─── NAVBAR SCROLL SHADOW ───
+const navbar = document.querySelector('.navbar');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) {
+    navbar.style.boxShadow = '0 4px 24px rgba(0,0,0,0.4)';
+  } else {
+    navbar.style.boxShadow = 'none';
+  }
+});
+
+// ─── LANGUAGE TOGGLE ───
+const langBtn = document.querySelector('.lang-toggle');
+if (langBtn) {
+  let currentLang = localStorage.getItem('site_lang') || 'pt';
+  
+  const updateLanguage = (lang) => {
+    if (!window.i18n) return; // Wait for translations.js to load
+    const dict = i18n[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (dict[key]) {
+        // Handle elements that might have icons inside, e.g. CTA buttons
+        if (el.tagName === 'A' || el.tagName === 'BUTTON') {
+          // Keep SVGs if any
+          const svg = el.querySelector('svg');
+          if (svg) {
+            el.innerHTML = '';
+            el.appendChild(svg);
+            el.appendChild(document.createTextNode(' ' + dict[key]));
+          } else {
+            el.innerText = dict[key];
+          }
+        } else {
+          el.innerText = dict[key];
         }
+      }
     });
+
+    // Update button visual
+    if (lang === 'en') {
+      langBtn.innerHTML = '<span class="flag">🇺🇸</span> EN <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>';
+    } else {
+      langBtn.innerHTML = '<span class="flag">🇧🇷</span> PT <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>';
+    }
+    
+    // Also update document language for accessibility
+    document.documentElement.lang = lang === 'en' ? 'en' : 'pt-BR';
+  };
+
+  langBtn.addEventListener('click', () => {
+    currentLang = currentLang === 'pt' ? 'en' : 'pt';
+    localStorage.setItem('site_lang', currentLang);
+    updateLanguage(currentLang);
+  });
+
+  // Initial load
+  updateLanguage(currentLang);
 }

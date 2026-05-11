@@ -1,421 +1,373 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- v3.0 - Design Premium -->
-    <title>Karen Brasil | Analista de Dados & Automação</title>
-    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&family=Archivo:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karen Brasil | Analista de Dados & Automação</title>
+<meta name="description" content="Portfólio de Karen Brasil — Analista de Dados, Power BI, SQL, Python, ZABBIX.">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="light">
-    <!-- NAVBAR -->
-    <nav class="navbar" role="navigation">
-        <div class="nav-wrapper">
-            <div class="logo">
-                <span class="logo-text">Karen Brasil</span>
-                <span class="logo-badge">Data • IA • Automação</span>
-            </div>
-            <div class="nav-menu">
-                <a href="#inicio" class="nav-item active">Início</a>
-                <a href="#sobre" class="nav-item">Sobre</a>
-                <a href="#habilidades" class="nav-item">Habilidades</a>
-                <a href="#experiencia" class="nav-item">Experiência</a>
-                <a href="#projetos" class="nav-item">Projetos</a>
-                <a href="#contato" class="nav-item">Contato</a>
-                <button class="theme-btn" id="themeBtn" aria-label="Alternar modo escuro" title="Alternar tema">
-                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                        <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                    </svg>
-                    <svg class="moon-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M21.64 15.95c-.18-1.34-.64-2.59-1.32-3.66.13-1.12.13-2.24 0-3.36 1.68-2.11 2.69-4.87 2.04-7.69-1.03-4.3-5.17-7.14-9.47-6.11-1.2.33-2.35.88-3.3 1.6-.95-.72-2.1-1.27-3.3-1.6-4.3-1.03-8.44 1.81-9.47 6.11-.65 2.82.36 5.58 2.04 7.69-.13 1.12-.13 2.24 0 3.36-.68 1.07-1.14 2.32-1.32 3.66-.25 1.75 0 3.5.73 5.15 1.03 2.74 3.15 5 5.87 6.27 1.2.6 2.52.9 3.88.9s2.68-.3 3.88-.9c2.72-1.27 4.84-3.53 5.87-6.27.73-1.65.98-3.4.73-5.15z"/>
-                    </svg>
-                </button>
-                <button class="lang-btn" id="langBtn">EN</button>
-            </div>
+<body>
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="#inicio" class="nav-logo">
+      <span class="nav-logo-name">KAREN<span>.</span>BRASIL</span>
+      <span class="nav-logo-role">Data · BI · Automação</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#inicio" class="active" data-i18n="nav_home">Início</a></li>
+      <li><a href="sobre.html" data-i18n="nav_about">Sobre Mim</a></li>
+      <li><a href="#habilidades" data-i18n="nav_skills">Skills</a></li>
+      <li><a href="#experiencia" data-i18n="nav_exp">Experiência</a></li>
+      <li><a href="#projetos" data-i18n="nav_projects">Projetos</a></li>
+      <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
+      <li>
+        <button class="lang-toggle">
+          <span class="flag">🇧🇷</span> PT 
+          <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+
+    <!-- LEFT -->
+    <div class="hero-left">
+      <div class="hero-star">★</div>
+      <h1 class="hero-name">
+        <span class="line1">KAREN</span>
+        <span class="line2">BRASIL</span>
+      </h1>
+      <div class="hero-underline"></div>
+      <p class="hero-role-text">Análise de Dados &amp; Soluções em Power BI</p>
+      <p class="hero-location">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Eusébio, Ceará — Brasil
+      </p>
+      <div class="hero-actions">
+        <a href="#projetos" class="btn-primary">Ver Projetos</a>
+        <a href="curriculo-premium.html" class="btn-outline">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Ver Currículo
+        </a>
+      </div>
+      <div class="hero-status">
+        <span class="hero-status-dot"></span>
+        Disponível para oportunidades
+      </div>
+    </div>
+
+    <!-- RIGHT — PHOTO -->
+    <div class="hero-right">
+      <div class="chip-location">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Eusébio, CE
+      </div>
+      <div class="hero-photo-wrap">
+        <img src="assets/karen-foto-final-nobg.png" alt="Karen Brasil" class="hero-photo">
+      </div>
+      <div class="chip-status">
+        <span class="chip-dot"></span>
+        Status: Disponível
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SOBRE -->
+<section id="sobre" class="section section-alt">
+  <div class="container">
+    <span class="section-label fade-in">Quem sou</span>
+    <h2 class="section-title fade-in">Sobre Mim</h2>
+    <div class="about-bio">
+      <p class="fade-in">Sou <strong>Karen Brasil</strong>, profissional de TI com foco em Análise de Dados e Business Intelligence. Tenho experiência em monitoramento de infraestrutura e construção de dashboards estratégicos com Power BI, SQL e Python.</p>
+      <p class="fade-in">Combino conhecimento técnico em infraestrutura com visão analítica de dados — criando automações inteligentes com <strong>n8n e APIs de IA</strong> para resolver problemas reais com eficiência.</p>
+      <p class="fade-in">Graduanda em Análise e Desenvolvimento de Sistemas, apaixonada por transformar dados em decisões e por construir soluções que geram impacto direto nos negócios.</p>
+    </div>
+    <div class="about-tags fade-in">
+      <span class="about-tag">📍 Eusébio, CE</span>
+      <span class="about-tag">🎓 ADS — Estácio</span>
+      <span class="about-tag">📊 Data Analytics — Digital College</span>
+      <span class="about-tag">🌐 Remoto / Híbrido</span>
+    </div>
+  </div>
+</section>
+
+<!-- HABILIDADES -->
+<section id="habilidades" class="section">
+  <div class="container">
+    <span class="section-label fade-in">Tecnologias</span>
+    <h2 class="section-title fade-in">Stack Técnico</h2>
+    <div class="skills-group">
+
+      <div class="fade-in">
+        <p class="skill-cat-title">Linguagens</p>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon ic-blue">🐍</div><span class="skill-name-text">Python</span></div>
+          <div class="skill-card"><div class="skill-icon ic-blue">🗄️</div><span class="skill-name-text">SQL</span></div>
+          <div class="skill-card"><div class="skill-icon ic-orange">📜</div><span class="skill-name-text">JavaScript</span></div>
+          <div class="skill-card"><div class="skill-icon ic-pink">☕</div><span class="skill-name-text">Java</span></div>
         </div>
-    </nav>
+      </div>
 
-    <!-- HERO -->
-    <section id="inicio" class="hero">
-        <div class="hero-bg"></div>
-        <div class="hero-content">
-            <div class="hero-label">Bem-vindo</div>
-            <h1 class="hero-title">Karen Brasil</h1>
-            <p class="hero-subtitle">Transformo dados em estratégia e automatizzo processos com IA</p>
-            <p class="hero-description">Especialista em SQL, Python e automação. 2+ anos construindo soluções de dados e infraestrutura que impactam.</p>
-            <a href="#contato" class="btn btn-primary">Vamos Conversar</a>
+      <div class="fade-in">
+        <p class="skill-cat-title">Data & Analytics</p>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon ic-orange">📊</div><span class="skill-name-text">Power BI</span></div>
+          <div class="skill-card"><div class="skill-icon ic-blue">🐼</div><span class="skill-name-text">Pandas</span></div>
+          <div class="skill-card"><div class="skill-icon ic-green">📈</div><span class="skill-name-text">Excel</span></div>
+          <div class="skill-card"><div class="skill-icon ic-purple">🔢</div><span class="skill-name-text">Matplotlib</span></div>
         </div>
-        <div class="hero-stats">
-            <div class="stat">
-                <span class="stat-value">2+</span>
-                <span class="stat-label">Anos Experiência</span>
-            </div>
-            <div class="stat">
-                <span class="stat-value">20+</span>
-                <span class="stat-label">Skills Técnicas</span>
-            </div>
-            <div class="stat">
-                <span class="stat-value">3</span>
-                <span class="stat-label">Empresas</span>
-            </div>
+      </div>
+
+      <div class="fade-in">
+        <p class="skill-cat-title">Infraestrutura & Monitoramento</p>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon ic-orange">🔴</div><span class="skill-name-text">ZABBIX</span></div>
+          <div class="skill-card"><div class="skill-icon ic-orange">📉</div><span class="skill-name-text">Grafana</span></div>
+          <div class="skill-card"><div class="skill-icon ic-blue">🗂️</div><span class="skill-name-text">Active Directory</span></div>
+          <div class="skill-card"><div class="skill-icon ic-purple">🐳</div><span class="skill-name-text">Docker</span></div>
         </div>
-    </section>
+      </div>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Sobre Mim</h2>
-                <p class="section-subtitle">Profissional em transformação digital</p>
-            </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-sm">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25m0 0H5.25M7.5 10.875C7.5 10.254 8.004 9.75 8.625 9.75h2.25m0 0H9.75m4.875 0h2.25m0 0h2.25M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </div>
-                    <h3>Análise de Dados</h3>
-                    <p>Transformo dados brutos em insights acionáveis com SQL, Python e Power BI. Criação de dashboards que orientam decisões estratégicas.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-sm">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.592c.55 0 1.02.398 1.11.94m-.213 9.938v5.25a2.25 2.25 0 01-2.25 2.25H7.5a2.25 2.25 0 01-2.25-2.25v-5.243m9.06-6.44c.713-.347 1.473-.998 1.473-2.25 0-1.148-.596-2.146-1.483-2.646a5.969 5.969 0 00-2.820-.551c-.504 0-.1.25-.82.75s-.937 1.168-1.22 1.82c-.297.697-.572 1.4-.913 2.05.163.585.714 1.413 1.48 1.973.636.477 1.359.831 2.112 1.055.504.105 1.085.146 1.58-.029z" />
-                        </svg>
-                    </div>
-                    <h3>Automação Inteligente</h3>
-                    <p>Construo fluxos de automação com n8n e APIs REST. Integro IA (Claude, Gemini) para processos mais eficientes.</p>
-                </div>
-                <div class="about-card">
-                    <div class="card-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-sm">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 21h16.5M4.5 3h15M5.25 3v15m13.5-15v15M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6h1.5m-1.5 3h1.5m-1.5 3h1.5" />
-                        </svg>
-                    </div>
-                    <h3>Infraestrutura</h3>
-                    <p>Experiência em monitoramento com ZABBIX/GRAFANA. Gestão de sistemas, redes e suporte técnico de ponta.</p>
-                </div>
-            </div>
+      <div class="fade-in">
+        <p class="skill-cat-title">IA & Automação</p>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon ic-purple">🤖</div><span class="skill-name-text">n8n</span></div>
+          <div class="skill-card"><div class="skill-icon ic-blue">🧠</div><span class="skill-name-text">Claude API</span></div>
+          <div class="skill-card"><div class="skill-icon ic-blue">✨</div><span class="skill-name-text">Gemini</span></div>
+          <div class="skill-card"><div class="skill-icon ic-green">🔗</div><span class="skill-name-text">APIs REST</span></div>
         </div>
-    </section>
+      </div>
 
-    <!-- HABILIDADES -->
-    <section id="habilidades" class="section section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2>Stack Técnico</h2>
-                <p class="section-subtitle">Ferramentas que domino</p>
-            </div>
-
-            <!-- Linguagens -->
-            <div class="skills-block">
-                <h3 class="skills-title">Linguagens de Programação</h3>
-                <div class="skills-grid">
-                    <div class="skill-badge" data-level="pro">
-                        <span class="skill-name">Python</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-badge" data-level="pro">
-                        <span class="skill-name">SQL</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">JavaScript</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">Java</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">HTML/CSS</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Data & Analytics -->
-            <div class="skills-block">
-                <h3 class="skills-title">Data & Analytics</h3>
-                <div class="skills-grid">
-                    <div class="skill-badge" data-level="pro">
-                        <span class="skill-name">Pandas</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-badge" data-level="pro">
-                        <span class="skill-name">Power BI</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-badge" data-level="pro">
-                        <span class="skill-name">Excel</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">Matplotlib</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Infraestrutura -->
-            <div class="skills-block">
-                <h3 class="skills-title">Infraestrutura & Monitoramento</h3>
-                <div class="skills-grid">
-                    <div class="skill-badge" data-level="pro">
-                        <span class="skill-name">ZABBIX</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-badge" data-level="pro">
-                        <span class="skill-name">GRAFANA</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-badge" data-level="pro">
-                        <span class="skill-name">Active Directory</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">Docker</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- IA & Automação -->
-            <div class="skills-block">
-                <h3 class="skills-title">IA & Automação</h3>
-                <div class="skills-grid">
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">Claude API</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">Gemini</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">n8n</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">APIs REST</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Databases & DevOps -->
-            <div class="skills-block">
-                <h3 class="skills-title">Banco de Dados & DevOps</h3>
-                <div class="skills-grid">
-                    <div class="skill-badge" data-level="pro">
-                        <span class="skill-name">PostgreSQL</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-badge" data-level="pro">
-                        <span class="skill-name">Git</span>
-                        <span class="skill-level">Intermediário</span>
-                    </div>
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">MongoDB</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                    <div class="skill-badge" data-level="mid">
-                        <span class="skill-name">Vercel</span>
-                        <span class="skill-level">Básico</span>
-                    </div>
-                </div>
-            </div>
+      <div class="fade-in">
+        <p class="skill-cat-title">Banco de Dados & DevOps</p>
+        <div class="skills-grid">
+          <div class="skill-card"><div class="skill-icon ic-blue">🐘</div><span class="skill-name-text">PostgreSQL</span></div>
+          <div class="skill-card"><div class="skill-icon ic-green">🌿</div><span class="skill-name-text">MongoDB</span></div>
+          <div class="skill-card"><div class="skill-icon ic-orange">🔀</div><span class="skill-name-text">Git</span></div>
+          <div class="skill-card"><div class="skill-icon ic-purple">▲</div><span class="skill-name-text">Vercel</span></div>
         </div>
-    </section>
+      </div>
 
-    <!-- EXPERIÊNCIA -->
-    <section id="experiencia" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Trajetória Profissional</h2>
-                <p class="section-subtitle">Experiências que me formaram</p>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="exp-badge">Current</div>
-                        <h3>Analista N1 - NOC</h3>
-                        <p class="exp-company">How be - Tecnologia e Soluções</p>
-                        <p class="exp-date">Fevereiro 2024 - Hoje • 10 meses</p>
-                        <p class="exp-desc">Monitoramento de infraestrutura com ZABBIX e GRAFANA para 150+ hosts. Elaboração de dashboards analíticos. Gestão de câmeras IP, WiFi e dispositivos IoT. Suporte remoto via AnyDesk.</p>
-                        <div class="exp-tags">
-                            <span>ZABBIX</span>
-                            <span>GRAFANA</span>
-                            <span>Infraestrutura</span>
-                            <span>IoT</span>
-                        </div>
-                    </div>
-                </div>
+    </div>
+  </div>
+</section>
 
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Suporte Técnico - Field Service</h3>
-                        <p class="exp-company">Mobwire - Serviços de Telecomunicação</p>
-                        <p class="exp-date">Agosto 2023 - Agosto 2024 • 1 ano</p>
-                        <p class="exp-desc">Suporte remoto via AnyDesk para prestadores de serviços. Gestão de máquinas com Active Directory. Configuração, formatação e instalação de softwares. Criação de acessos e suporte técnico especializado.</p>
-                        <div class="exp-tags">
-                            <span>Active Directory</span>
-                            <span>AnyDesk</span>
-                            <span>Suporte</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <h3>Estagiária - Suporte de TI</h3>
-                        <p class="exp-company">Hapvida Assistência Médica S.A.</p>
-                        <p class="exp-date">Janeiro 2020 - Setembro 2023 • 2 anos 8 meses</p>
-                        <p class="exp-desc">Instalação e configuração de biometria remotamente. Registro de pacientes em leitores biométricos. Suporte em autorizações, análise de solicitações. Suporte em procedimentos e internações. Treinamento de prestadores.</p>
-                        <div class="exp-tags">
-                            <span>Biometria</span>
-                            <span>Suporte</span>
-                            <span>Treinamento</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-education">
-                    <h3>Formação Acadêmica</h3>
-                    <div class="education-items">
-                        <div class="edu-item">
-                            <span class="edu-degree">Análise e Desenvolvimento de Sistemas</span>
-                            <span class="edu-school">Centro Universitário Estácio do Ceará • 2023-2025</span>
-                        </div>
-                        <div class="edu-item">
-                            <span class="edu-degree">Data Analytics</span>
-                            <span class="edu-school">Digital College • 2024-2025</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- EXPERIÊNCIA -->
+<section id="experiencia" class="section section-alt">
+  <div class="container">
+    <span class="section-label fade-in">Trajetória</span>
+    <h2 class="section-title fade-in">Experiência Profissional</h2>
+    <div class="timeline">
+      <div class="tl-item fade-in">
+        <div class="tl-top">
+          <div><p class="tl-title">Analista N1 — NOC</p><p class="tl-company">How be · Tecnologia e Soluções</p><p class="tl-date">Fev 2024 – Hoje · 1+ ano</p></div>
+          <span class="tl-badge current">Atual</span>
         </div>
-    </section>
-
-    <!-- PROJETOS -->
-    <section id="projetos" class="section section-dark">
-        <div class="container">
-            <div class="section-header">
-                <h2>Projetos em Destaque</h2>
-                <p class="section-subtitle">Trabalhos que realizei</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>WorkConnect</h3>
-                        <span class="project-status">Em Desenvolvimento</span>
-                    </div>
-                    <p class="project-desc">App inteligente para análise e busca de vagas de emprego. Utiliza Python e SQL para processamento de dados em tempo real.</p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Python</span>
-                        <span class="tech-badge">SQL</span>
-                        <span class="tech-badge">Data Analytics</span>
-                    </div>
-                    <a href="https://github.com/KarenBrasil" target="_blank" class="project-link">Ver no GitHub →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Dashboard Monitoramento</h3>
-                        <span class="project-status">Concluído</span>
-                    </div>
-                    <p class="project-desc">Dashboard profissional para monitoramento de infraestrutura em tempo real. Integra ZABBIX com GRAFANA para visualização de métricas.</p>
-                    <div class="project-tech">
-                        <span class="tech-badge">ZABBIX</span>
-                        <span class="tech-badge">GRAFANA</span>
-                        <span class="tech-badge">PostgreSQL</span>
-                    </div>
-                    <a href="https://sites.google.com/view/portfoliokarenbr" target="_blank" class="project-link">Ver Detalhes →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Automação com n8n</h3>
-                        <span class="project-status">Em Desenvolvimento</span>
-                    </div>
-                    <p class="project-desc">Fluxos de automação inteligentes integrando IA. Utiliza Claude API e Gemini para processar dados automaticamente.</p>
-                    <div class="project-tech">
-                        <span class="tech-badge">n8n</span>
-                        <span class="tech-badge">Claude API</span>
-                        <span class="tech-badge">Automação</span>
-                    </div>
-                    <a href="https://github.com/KarenBrasil" target="_blank" class="project-link">Ver Código →</a>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Análise de Dados</h3>
-                        <span class="project-status">Em Desenvolvimento</span>
-                    </div>
-                    <p class="project-desc">Projetos de análise exploratória com Power BI e SQL. Dashboards executivos para tomada de decisão estratégica.</p>
-                    <div class="project-tech">
-                        <span class="tech-badge">Power BI</span>
-                        <span class="tech-badge">SQL</span>
-                        <span class="tech-badge">Python</span>
-                    </div>
-                    <a href="https://sites.google.com/view/portfoliokarenbr" target="_blank" class="project-link">Ver Portfolio →</a>
-                </div>
-            </div>
+        <p class="tl-desc">Monitoramento de 150+ hosts com ZABBIX e dashboards em GRAFANA. Gestão de infraestrutura IoT, câmeras IP e redes WiFi. Suporte técnico e atendimento de chamados via GLPI.</p>
+        <div class="tl-tags"><span class="tl-tag">ZABBIX</span><span class="tl-tag">GRAFANA</span><span class="tl-tag">IoT</span><span class="tl-tag">GLPI</span></div>
+      </div>
+      <div class="tl-item fade-in">
+        <div class="tl-top">
+          <div><p class="tl-title">Suporte Técnico — Field Service</p><p class="tl-company">Mobwire · Telecomunicação</p><p class="tl-date">Ago 2023 – Ago 2024 · 1 ano</p></div>
+          <span class="tl-badge past">Anterior</span>
         </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="section contact-cta">
-        <div class="container">
-            <h2>Vamos Trabalhar Juntos?</h2>
-            <p>Estou aberta a oportunidades remotas, híbridas ou presenciais no Brasil e Europa.</p>
-            <div class="contact-methods">
-                <a href="https://www.linkedin.com/in/karen-brasil19/" target="_blank" class="contact-btn">
-                    <span class="contact-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="icon-sm">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                        </svg>
-                    </span>
-                    <span>LinkedIn</span>
-                </a>
-                <a href="https://github.com/KarenBrasil" target="_blank" class="contact-btn">
-                    <span class="contact-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="icon-sm">
-                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                        </svg>
-                    </span>
-                    <span>GitHub</span>
-                </a>
-                <a href="mailto:eukarenbrasil@gmail.com" class="contact-btn">
-                    <span class="contact-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-sm">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5A2.25 2.25 0 002.25 6.75m19.5 0v-1.5a2.25 2.25 0 00-2.25-2.25H4.5a2.25 2.25 0 00-2.25 2.25v1.5m19.5 0h-15m0 0H4.5m15 0H9" />
-                        </svg>
-                    </span>
-                    <span>Email</span>
-                </a>
-                <a href="https://wa.me/5585998370928" target="_blank" class="contact-btn">
-                    <span class="contact-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon-sm">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h6m-6 3H12m8.25-6A2.25 2.25 0 0017.25 4.5H6.75A2.25 2.25 0 004.5 6.75v10.5A2.25 2.25 0 006.75 19.5h10.5A2.25 2.25 0 0019.5 17.25V6.75z" />
-                        </svg>
-                    </span>
-                    <span>WhatsApp</span>
-                </a>
-            </div>
+        <p class="tl-desc">Suporte remoto via AnyDesk, gestão de máquinas com Active Directory, configuração de sistemas e criação de acessos técnicos.</p>
+        <div class="tl-tags"><span class="tl-tag">Active Directory</span><span class="tl-tag">AnyDesk</span><span class="tl-tag">Windows</span></div>
+      </div>
+      <div class="tl-item fade-in">
+        <div class="tl-top">
+          <div><p class="tl-title">Estagiária — Suporte de TI</p><p class="tl-company">Hapvida Assistência Médica S.A.</p><p class="tl-date">Jan 2020 – Set 2023 · 2a 8m</p></div>
+          <span class="tl-badge past">Anterior</span>
         </div>
-    </section>
+        <p class="tl-desc">Instalação de biometria remota, registro de pacientes, suporte em autorizações e internações. Treinamento de prestadores e equipes técnicas.</p>
+        <div class="tl-tags"><span class="tl-tag">Biometria</span><span class="tl-tag">Suporte</span><span class="tl-tag">Treinamento</span></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>© 2025 Karen Brasil. Construído com atenção aos detalhes.</p>
-    </footer>
+<!-- PROJETOS -->
+<section id="projetos" class="section">
+  <div class="container">
+    <span class="section-label fade-in">Portfólio</span>
+    <h2 class="section-title fade-in">Dashboards Power BI</h2>
+    <p class="section-sub fade-in">Clique em "Interagir no Dashboard" para explorar os dados ao vivo</p>
+    <div class="projects-grid">
+      <div class="project-card fade-in">
+        <div class="project-cover">
+          <img src="assets/dash-dre.png" alt="DRE Financeiro Dashboard">
+          <div class="project-overlay">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNmM3NmQ3ZWQtMjU2Ni00NTAwLTlhMWItZTZhODdjMjU4OWM4IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" class="project-btn">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+              Interagir no Painel
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-name">DRE Financeiro</span>
+            <span class="project-status status-done">Concluído</span>
+          </div>
+          <p class="project-desc">Painel que consolida receita, custos, despesas e lucro com detalhamento por mês, tipo de pagamento e cliente. Facilita o acompanhamento da performance financeira e principais fontes de resultado.</p>
+          <div class="project-tech-list">
+            <span class="tech-chip">Power BI</span><span class="tech-chip">DAX</span><span class="tech-chip">Análise Financeira</span>
+          </div>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+      <div class="project-card fade-in">
+        <div class="project-cover">
+          <img src="assets/dash-faturamento.png" alt="Faturamento Recebido Dashboard">
+          <div class="project-overlay">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNzYzMDJkNzItM2I5ZC00ZmQxLTlhY2ItZmFkMGEyN2QyZDhiIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" class="project-btn">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+              Interagir no Painel
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-name">Faturamento Recebido</span>
+            <span class="project-status status-done">Concluído</span>
+          </div>
+          <p class="project-desc">Painel focado no acompanhamento de receita, despesas e lucro líquido. Permite comparar valores recebidos e a receber, além de filtrar por loja, produto, vendedor e categoria.</p>
+          <div class="project-tech-list">
+            <span class="tech-chip">Power BI</span><span class="tech-chip">DAX</span><span class="tech-chip">Dashboard Financeiro</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-cover">
+          <img src="assets/dash-social.png" alt="Insights Rio Mar Dashboard">
+          <div class="project-overlay">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiNzMxZDU1YzEtZTM5Ny00NDM4LTkzNjUtMzQ5NTVlMDljYjlhIiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" class="project-btn">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+              Interagir no Painel
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-name">Insights Rio Mar</span>
+            <span class="project-status status-done">Concluído</span>
+          </div>
+          <p class="project-desc">Criado para acompanhar a performance de publicações do Rio Mar Shopping. Mostra volume de posts por tipo, média de engajamento, comentários e evolução de seguidores ao longo do ano.</p>
+          <div class="project-tech-list">
+            <span class="tech-chip">Power BI</span><span class="tech-chip">Social Media</span><span class="tech-chip">Engajamento</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card fade-in">
+        <div class="project-cover">
+          <img src="assets/dash-comercial.png" alt="Gestão Comercial Dashboard">
+          <div class="project-overlay">
+            <a href="https://app.powerbi.com/view?r=eyJrIjoiZWNkNjRlMGQtNTk5Yy00OWJhLWIyYmYtZjFjOTUxMDkxMDU2IiwidCI6IjY1OWNlMmI4LTA3MTQtNDE5OC04YzM4LWRjOWI2MGFhYmI1NyJ9" target="_blank" class="project-btn">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+              Interagir no Painel
+            </a>
+          </div>
+        </div>
+        <div class="project-body">
+          <div class="project-top">
+            <span class="project-name">Gestão Comercial</span>
+            <span class="project-status status-done">Concluído</span>
+          </div>
+          <p class="project-desc">Apresenta total vendido por período, desempenho da equipe de vendas, evolução mês a mês e permite simulação de cenários futuros para apoio à decisão estratégica.</p>
+          <div class="project-tech-list">
+            <span class="tech-chip">Power BI</span><span class="tech-chip">DAX</span><span class="tech-chip">Análise de Vendas</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CONTATO -->
+<section id="contato" class="contact-section">
+  <div class="container">
+    <div class="contact-box fade-in">
+      <span class="section-label" style="display:block;text-align:center;margin-bottom:.4rem">Vamos conversar</span>
+      <h2 class="section-title">Vamos Trabalhar Juntos?</h2>
+      <p class="section-sub">Aberta a oportunidades remotas, híbridas e presenciais no Brasil.</p>
+      <div class="contact-grid">
+        <a href="https://www.linkedin.com/in/karen-brasil19/" target="_blank" class="contact-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/KarenBrasil" target="_blank" class="contact-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="mailto:eukarenbrasil@gmail.com" class="contact-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.75L2.25 6.75"/></svg>
+          E-mail
+        </a>
+        <a href="https://wa.me/5585998370928" target="_blank" class="contact-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
+      </div>
+      <a href="curriculo-premium.html" class="contact-cta-main">
+        <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Ver Currículo para PDF
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="mega-footer">
+  <div class="footer-bg-text">KAREN.BRASIL</div>
+  <div class="container footer-inner">
+    
+    <div class="footer-left fade-in">
+      <div class="footer-brand">
+        <span class="nav-logo-name">KAREN<span style="color:var(--orange)">.</span>BRASIL</span>
+      </div>
+      <p class="footer-subtitle" data-i18n="footer_subtitle">Pronta para novos desafios no mundo dos dados e automação?</p>
+    </div>
+
+    <div class="footer-mid fade-in">
+      <h5 data-i18n="footer_links">LINKS</h5>
+      <ul>
+        <li><a href="#inicio" data-i18n="nav_home">Início</a></li>
+        <li><a href="sobre.html" data-i18n="nav_about">Sobre Mim</a></li>
+        <li><a href="#projetos" data-i18n="nav_projects">Projetos</a></li>
+        <li><a href="#contato" data-i18n="nav_contact">Contato</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-right fade-in">
+      <h5 data-i18n="footer_contact">CONTATO DIRETO</h5>
+      <ul class="footer-socials">
+        <li><a href="https://github.com/KarenBrasil" target="_blank"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg> github.com/KarenBrasil</a></li>
+        <li><a href="https://www.linkedin.com/in/karen-brasil19/" target="_blank"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> /in/karen-brasil19</a></li>
+        <li><a href="mailto:eukarenbrasil@gmail.com"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0l-9.75 6.75L2.25 6.75"/></svg> eukarenbrasil@gmail.com</a></li>
+        <li><a href="https://wa.me/5585998370928" target="_blank"><svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg> +55 (85) 9 9837-0928</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span data-i18n="footer_copy">© 2025 KAREN BRASIL.</span>
+    <span data-i18n="footer_location">EUSÉBIO, CE, BRASIL.</span>
+  </div>
+</footer>
+
+<script src="translations.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
